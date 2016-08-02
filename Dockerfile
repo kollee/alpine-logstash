@@ -1,4 +1,4 @@
-FROM kollee/alpine-java:jre-8
+FROM kollee/alpine-java:latest
 
 # install plugin dependencies
 RUN apk add --no-cache libzmq su-exec bash
@@ -9,7 +9,7 @@ RUN mkdir -p /usr/local/lib /opt \
 
 
 ENV LOGSTASH_MAJOR 2.3
-ENV LOGSTASH_VERSION 2.3.2
+ENV LOGSTASH_VERSION 2.3.4
 
 COPY install_logstash.sh /
 COPY install_plugins.sh /
